@@ -4,7 +4,7 @@ import cover_image from "../assets/movie2.png";
 import { useDispatch } from "react-redux";
 import { v4 as uuidv4 } from "uuid"; // Import the uuidv4 function
 
-const Signup = ({ users, setUsers }) => {
+const Signup = () => {
   const id = uuidv4(10); //generate a random unique id for each user
   const dispatch = useDispatch();
   const [error, setError] = useState(null);
@@ -76,9 +76,6 @@ const Signup = ({ users, setUsers }) => {
         setSuccess(null);
       }, 2000);
     }
-
-    // Add the signup to the users array
-    setUsers((prevUsers) => [...prevUsers, inputs]);
   };
 
   const handleChange = (e) => {

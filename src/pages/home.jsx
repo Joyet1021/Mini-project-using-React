@@ -4,6 +4,7 @@ import Button from "../components/user/button";
 import { useHistory } from "react-router-dom";
 import { useProductContext } from "../context/productContext";
 import StarIcon from "@mui/icons-material/Star";
+import Banner from '../assets/banner.jpg';
 
 function home() {
   const { products } = useProductContext();
@@ -17,6 +18,14 @@ function home() {
   return (
     <div>
       <Navbar />
+      <hr />
+      <div className="relative h-screen w-full">
+        <img className="h-full w-full " src={Banner} alt="" />
+        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+          <p className="m-10 text-white font-bold text-4xl flex items-center justify-center ">Explore the World of Movies</p>
+        </div>
+      </div>
+      <hr className="mt-7 " />
       <div className="grid sm:grid-cols-4 grid-cols-3 gap-4 p-7 bg-white">
         {products.map((product, index) => {
           let total = 0;

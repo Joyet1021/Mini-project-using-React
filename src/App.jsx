@@ -36,7 +36,7 @@ function App() {
       >
         <Switch>
           <Route exact path="/" render={(props) => ( <Login {...props} setUsers={setUsers} setAdmin={setAdmin} setIsAuthenticated={setIsAuthenticated} /> )} />
-          <Route exact path="/signup" render={(props) => ( <Signup {...props} users={users} setUsers={setUsers} />)}/>
+          <Route exact path="/signup" component={Signup}/>
           <Route exact path="/usernavbar" render={(props) => <userNavbar {...props} setUsers={setUsers} />}/>
           <Route exact path="/adminnavbar" render={(props) => <adminNavbar {...props} setAdmin={setAdmin} />}/>
           <Route exact path="/home" component={Home} />
